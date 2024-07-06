@@ -22,12 +22,12 @@ app.use("/",(req,res) =>{
 })
 
 
-// // Get port from environment variable or default to 5001
-// const PORT = process.env.PORT || 5001;
+// Get port from environment variable or default to 5001
+const PORT = process.env.PORT || 5001;
 
-// // Start server
-// app.listen(PORT, () => {
-//   console.log(`Server is running on port ${PORT}`);
-// });
+// Start server
+app.listen(PORT, () => {
+  console.log(`Server is running on port ${PORT}`);
+});
 
 module.exports = app;

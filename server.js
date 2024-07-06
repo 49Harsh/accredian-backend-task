@@ -17,6 +17,9 @@ app.use(express.json());
 // Mount referral routes
 app.use('/api', referralRoutes);
 
+app.use("/",(req,res) =>{
+  res.send("Welcome to the referral API")
+})
 // Get port from environment variable or default to 5001
 const PORT = process.env.PORT || 5001;
 

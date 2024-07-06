@@ -2,11 +2,14 @@ const express = require('express');
 const dotenv = require('dotenv');
 const referralRoutes = require('./routes/referralRoutes.js');
 const cors = require('cors');
+const http = require('http')
 
 // Load environment variables from .env file
 dotenv.config();
-
 const app = express();
+
+const server = http.createServer(app);
+
 
 // Enable CORS to allow cross-origin requests
 app.use(cors());
@@ -27,7 +30,7 @@ app.use("/",(req,res) =>{
 const PORT = process.env.PORT || 5001;
 
 // Start server
-app.listen(PORT, () => {
+server.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
 });
 

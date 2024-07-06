@@ -1,3 +1,8 @@
 .vercel
 /node_modules/
 .env
+
+.idea/*
+
+images/*
+!image/.gitkeep

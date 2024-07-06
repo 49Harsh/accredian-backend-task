@@ -23,13 +23,6 @@ app.use("/",(req,res) =>{
 
 
 
-process.on('unhandledRejection', (reason, promise) => {
-  console.error('Unhandled Rejection at:', promise, 'reason:', reason);
-});
-
-process.on('uncaughtException', (error) => {
-  console.error('Uncaught Exception:', error);
-});
 
 // Get port from environment variable or default to 5001
 const PORT = process.env.PORT || 5001;

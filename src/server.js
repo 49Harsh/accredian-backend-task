@@ -1,6 +1,6 @@
 const express = require('express');
 const dotenv = require('dotenv');
-const referralRoutes = require('./src/routes/referralRoutes.js');
+const referralRoutes = require('./routes/referralRoutes.js');
 const cors = require('cors');
 
 // Load environment variables from .env file
@@ -20,7 +20,6 @@ app.use('/api', referralRoutes);
 app.use("/",(req,res) =>{
   res.send("Welcome to the referral API")
 })
-
 
 
 
